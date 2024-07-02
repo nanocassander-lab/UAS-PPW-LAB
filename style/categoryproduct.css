@@ -1,0 +1,218 @@
+body {
+    background-color: #fff;
+    color: #ffffff;
+}
+
+.container {
+    width: min(100% - 30px, 1080px);
+    margin-inline: auto;
+}
+
+main {
+    height: auto;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #798777;
+    height: 76px;
+    width: 100%;
+    z-index: 95;
+}
+
+header .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .title {
+    line-height: 76px;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--app-header-text-color);
+    text-decoration: none;
+}
+
+header .title h1 {
+    color: var(--app-header-text-color);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    line-height: 76px;
+    margin-left: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav {
+    transition: all 0.25s ease-out;
+}
+
+nav ul li {
+    display: inline;
+    line-height: 76px;
+}
+
+nav ul li a, .navbar i {
+    color: var(--app-header-menu-text-color);
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.2px;
+    transition: all 0.25s ease-in-out;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navbar i {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 76px;
+}
+
+nav ul li a:hover { 
+    color: #ecd100;
+    text-decoration: underline;
+}
+
+.scrolled {
+    animation: all .25s ease-in-out;
+    box-shadow: var(--app-body-box-shadow);
+}
+
+@media (min-width:768px) {
+    nav > ul {
+        display: block;
+    }
+    .navbar {
+        display: none;
+    }  
+    
+    .background-opacity-nav-open {
+        display: none;
+    }
+}
+
+.judul {
+    padding: 120px;
+    background-image: url(gambar/bg.jpg);
+    background-size: cover;
+    padding-top: 190px;
+    padding-left: 430px;
+    color: white;
+}
+
+.judul h1 {
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-container {
+    padding-top: 20px;
+    padding-left: 420px;
+    padding-right: 420px;
+    padding-bottom: 100px;
+}
+
+.keterangan a {
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+}
+
+.gallery {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.image-container {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-container figcaption, .image-container a {
+    text-decoration: none;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.image-container figcaption:hover {
+    color: #798777;
+}
+
+.footer {
+    background-color: #798777;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+    .judul {
+        padding: 60px;
+        padding-top: 150px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+
+    .main-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+    }
+    
+    header .title h1 {
+        font-size: 12px;
+    }
+
+    nav ul li a,
+    .navbar i {
+        font-size: 9px;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+    .tablegambar {
+        padding-left: 5px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .tabletext {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    table img {
+        width: 100%;
+    }
+}
